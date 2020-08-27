@@ -1,0 +1,17 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+@{
+    //dynamic Layout;
+    if (Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["id"]) == "True")
+    {
+        Layout = "~/Views/Shared/Admin_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+

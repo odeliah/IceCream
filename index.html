@@ -1,0 +1,864 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+
+    <!--<script>
+        window.onload = function () {
+            if ("@ViewBag.Message" != null) {
+                alert("@ViewBag.Message");
+            }
+        }
+    </script>-->
+    <!--<script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewBag.Message");
+        };
+    </script>-->
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+            /* Full-width input fields */
+            .form-container input[type=text], .form-container input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+
+                /* When the inputs get focus, do something */
+                .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+    </style>
+
+    <title>Ice Cream Hotel Category Bootstrap Responsive Web Template | Home :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Ice Cream Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--// Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link href="css/pogo-slider.min.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Banner-Slider-CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css" media="all" />
+    <!-- owl carousel css (for welcome section) -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- flexSlider css (for testimonials) -->
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h1>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt=" " class="img-fluid">
+                </a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link" href="index.html">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item scroll" href="#work">Our Search</a>
+                            <a class="dropdown-item scroll" href="#testi">Testimonials</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item scroll" href="#news">About Us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item  mx-lg-3">
+                        <a class="nav-link" href="/IceCream/Index">Rank</a>
+                    </li>
+
+                    <li class="nav-item  mr-lg-3">
+                        <a class="nav-link" href="/Store/MapView">Map</a>
+                    </li>
+                    <li class="nav-item  mr-lg-3">
+                        <a class="nav-link" href="/Store/Index">Stores</a>
+                    </li>
+                    <li class="nav-item mr-lg-3">
+                        <a class="nav-link" href="/IceCream/Search">Search</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- //navigation -->
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="pogoSlider" id="js-main-slider">
+        <div class="pogoSlider-slide" data-transition="verticalSlide" data-duration="2000" style="background-image:url(images/b1.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <div class="banner-img-agile">
+                        <img src="images/bannerimg.png" alt="" class="img-fluid">
+                    </div>
+                    <h3 class="text-white">ice cream</h3>
+                    <p class="font-italic text-uppercase" style="font-size:22px">it’s a great day for ice cream!</p>
+                    <a class="bubbly-button" href="/IceCream/Search">Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="pogoSlider-slide" data-transition="verticalSlide" data-duration="2000" style="background-image:url(images/b2.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <div class="banner-img-agile">
+                        <img src="images/bannerimg.png" alt="" class="img-fluid">
+                    </div>
+                    <h3 class="text-white">ice cream</h3>
+                    <p class="font-italic text-uppercase" style="font-size:22px">the best ice creams ever!</p>
+                    <a class="bubbly-button" href="/IceCream/Search">Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000" style="background-image:url(images/b3.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <div class="banner-img-agile">
+                        <img src="images/bannerimg.png" alt="" class="img-fluid">
+                    </div>
+                    <h3 class="text-white">ice cream</h3>
+                    <p class="font-italic text-uppercase" style="font-size:22px">Find your favorite ice cream!</p>
+                    <a class="bubbly-button" href="/IceCream/Search">Find me!</a>
+                </div>
+            </div>
+        </div>
+        <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000" style="background-image:url(images/b4.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <div class="banner-img-agile">
+                        <img src="images/bannerimg.png" alt="" class="img-fluid">
+                    </div>
+                    <h3 class="text-white">ice cream</h3>
+                    <p class="font-italic text-uppercase" style="font-size:22px">Strawberry or dulce de leche?</p>
+                    <a class="bubbly-button" href="/IceCream/Search">Search</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- about -->
+    <div class="about py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="title-heading text-center mb-sm-5 mb-4">
+                <h3 class="title text-capitalize text-dark">welcome to our site!</h3>
+                <p class="title-text font-weight-light font-italic mt-2">We find the ice cream for you</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 aboutleft">
+                    <p class="about-left-agile text-dark text-capitalize font-weight-bold" style="font-size:30px">Quality, Kosher and Variety</p>
+                    <h3 class="about-headagile text-capitalize mt-2 mb-4 text-right">fresh & tasty! </h3>
+                    <p class="my-3" style="font-size:15px">
+                        We aim to show you as wide a range of quality ice creams as possible!
+                        <br>Here you will find the ice cream for your precise and personal taste.
+                        <br>Although we bring you variety as a fast, we do not compromise on quality!
+                        We only approve ice creams made from the finest ingredients.
+                    </p>
+                    <p style="font-size:15px">
+                        We believe you don't have to compromise on kosher to enjoy the best ice cream!
+                        And not on diet ...
+                        <br>We will find you the ice cream that meets your own criteria!
+                    </p>
+                </div>
+                <div class="col-lg-6 aboutright">
+                    <div class="large-12 columns">
+                        <!-- Owl-Carousel -->
+                        <div id="owl-demo" class="owl-carousel owl-theme text-center agileinfo-gallery-row">
+                            <a class="item g1">
+                                <img class="lazyOwl img-fluid" src="images/w1.png" title="Ice Cream" alt="" />
+                            </a>
+                            <a class="item g1">
+                                <img class="lazyOwl img-fluid" src="images/w2.png" title="Ice Cream" alt="" />
+                            </a>
+                            <a class="item g1">
+                                <img class="lazyOwl img-fluid" src="images/w3.png" title="Ice Cream" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//about-->
+    <!-- about bottom -->
+    <div class="video-w3l text-center py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="text-white">We care about what you say! Rate your experience so we can offer you the best!</h3>
+            <p class="font-italic p-3">Your experience will help us give you the best! </p>
+            <a class="btn btn-primary button-w3ls" href="/IceCream/Index" role="button">Rate</a>
+        </div>
+    </div>
+    <!-- //about bottom -->
+    <!-- work -->
+    <section class="services py-5" id="work">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="title-heading text-center mb-sm-5 mb-4">
+                <h3 class="title text-capitalize text-dark">our Search</h3>
+                <p class="title-text font-weight-light font-italic mt-2">Smart &amp; multi-filter search</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="d-flex box-a py-5 px-3">
+                        <div class="col-3">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="col-9">
+                            <h3>Calories</h3>
+                            <p class="mt-3">
+                                Find the ice cream with the amount of calories you want
+                            </p>
+                        </div>
+                    </div>
+                    <!-- .Box ends here -->
+                </div>
+                <!-- .Col-lg-6 ends here -->
+
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="d-flex box-b  py-5 px-3">
+                        <div class="col-9  text-right">
+                            <h3>flavor</h3>
+                            <p class="mt-3">
+                                find the perfect flavor for you
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- .Box ends here -->
+                </div>
+                <!-- .Col-lg-6 ends here -->
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="d-flex box-a  py-5 px-3">
+                        <div class="col-3">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="col-9">
+                            <h3>nutritions</h3>
+                            <p class="mt-3">
+                                Find the ice cream with the best nutritions 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- .Box ends here -->
+                </div>
+                <!-- .Col-lg-6 ends here -->
+
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="d-flex box-b  py-5 px-3">
+                        <div class="col-9 text-right">
+                            <h3>rank</h3>
+                            <p class="mt-3">
+                                Find the most recommended ice cream by most surfers
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <!-- .Box ends here -->
+                </div>
+                <!-- .Col-lg-6 ends here -->
+            </div>
+            <!-- .Row ends here -->
+        </div>
+        <!-- .Container ends here -->
+    </section>
+    <!-- .Section ends here -->
+    <!-- //work -->
+    <!-- news -->
+    <div class="middle-section py-5" id="news">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="title-heading text-center mb-sm-5 mb-4">
+                <h3 class="title text-capitalize text-dark">About Us</h3>
+                <p class="title-text font-weight-light font-italic mt-2">How we became who we are</p>
+            </div>
+            <div class="wthree_events_grid">
+                <div class="event-grids">
+                    <div class="agileits_event_grid_date">
+                        <p class="text-white text-uppercase">Running forward</p>
+                        <span>May 13th 2019</span>
+                    </div>
+                    <div class="agileinfo_events_grid1">
+                        <div class="events_info_w3ls">
+                            <a href="#" data-toggle="modal" data-target="#latest_news">Google purchases us</a>
+                            <p>Our Google group is full of energy and calories...<br>
+                            You can't really choose ice cream without using our service. We are always here for you!</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="event-grids">
+                    <div class="agileits_event_grid_date">
+                        <p class="text-white text-uppercase">First steps</p>
+                        <span>January 14th 2016</span>
+                    </div>
+                    <div class="agileinfo_events_grid1">
+                        <div class="events_info_w3ls">
+                            <a href="#" data-toggle="modal" data-target="#latest_news">Grease in ice cream stands</a>
+                            <p>We sat in the ice cream stores and tried to convince buyers to use our amazing site. <br>
+                            sometimes we even succeeded</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="event-grids">
+                    <div class="agileits_event_grid_date">
+                        <p class="text-white text-uppercase">Birth</p>
+                        <span>June 22nd 2015</span>
+                    </div>
+                    <div class="agileinfo_events_grid1 grid3 ">
+                        <div class="events_info_w3ls">
+                            <a href="#" data-toggle="modal" data-target="#latest_news">
+                                Still stuck in the garage
+                            </a>
+                            <p>
+                                At midnight we were locked in the garage... <br>
+                                For hours we fantasized about ice creams until dawn wound the idea in Tom's fevered mind.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="modal fade" id="latest_news">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                 Modal Header 
+                <div class="modal-header w3serv_modal">
+                    <h4 class="modal-title">Ice Cream</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                 Modal body 
+                <div class="modal-body">
+                    <img src="images/g1.jpg" class="img-fluid" alt="" />
+                    <p class="mt-3">
+                        Donec facilisis, orci a aliquet ultricies, lacus mauris vestibulum lorem, in malesuada augue sem sed dolor. Ut at metus
+                        vel enim elementum varius.Etiam ut cursus sem. Vestibulum dapibus a tellus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- //news -->
+     <!--middle slider 
+    <div class="projects py-5">
+        <div class="projects-grids py-xl-5 py-lg-3">
+            <div class="sreen-gallery-cursual">
+                <ul id="flexiselDemo1">
+                    <li>
+                        <div class="item">
+                            <div class="projects-agile-grid-info">
+                                <img src="images/s1.png" alt="" class="img-fluid" />
+                                <div class="projects-grid-caption text-center mt-4">
+                                    <h4>Ice Cream</h4>
+                                    <p class="my-2" style="font-size:14px">
+                                        Vanilla ice cream with strawberry syrup and fresh blueberries
+                                    </p>
+                                    <a href="details.html">Show me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="projects-agile-grid-info">
+                                <img src="images/s2.png" alt="" class="img-fluid" />
+                                <div class="projects-grid-caption text-center mt-4">
+                                    <h4>Ice Cream</h4>
+                                    <p class="my-2" style="font-size:14px">
+                                        Banana &amp; Vanilla ice cream + banana syrup, served with waffle and strawberry
+                                    </p>
+                                    <a href="/IceCream/Details?id=5d9a2e4d687deb4b24187065">Show me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="projects-agile-grid-info">
+                                <img src="images/s3.png" alt="" class="img-fluid" />
+                                <div class="projects-grid-caption text-center mt-4">
+                                    <h4>Ice Cream</h4>
+                                    <p class="my-2" style="font-size:14px">
+                                        Chocolate &amp; Vanilla ice cream plus fruits syrup, chocolate chips &amp; blueberries
+                                    </p>
+                                    <a href="details.html">Show me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="projects-agile-grid-info">
+                                <img src="images/s4.png" alt="" class="img-fluid" />
+                                <div class="projects-grid-caption text-center mt-4">
+                                    <h4>Ice Cream</h4>
+                                    <p class="my-2" style="font-size:14px">
+                                        Vanilla ice cream with tropical fruits: watermelon, strawberry and mango
+                                    </p>
+                                    <a href="details.html">Show me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="projects-agile-grid-info">
+                                <img src="images/s5.png" alt="" class="img-fluid" />
+                                <div class="projects-grid-caption text-center mt-4">
+                                    <h4>Ice Cream</h4>
+                                    <p class="my-2" style="font-size:14px">
+                                        Vanilla ice cream and strawberries plus whipped cream over and waffles
+                                    </p>
+                                    <a href="details.html">Show me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     //middle slider--> 
+    <!-- stats -->
+    <section class="stats_test py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="d-flex inner_stat_wthree_agileits text-center">
+                <div class="col-sm-4 py-5 stats_left counter_grid">
+                    <i class="far fa-building"></i>
+                    <p class="counter">15</p>
+                    <h4>Shops</h4>
+                </div>
+                <div class="col-sm-4 py-5 stats_left counter_grid2 border-left border-right">
+                    <i class="far fa-edit"></i>
+                    <p class="counter">50</p>
+                    <h4>Recommendations</h4>
+                </div>
+                <div class="col-sm-4 py-5 stats_left counter_grid1">
+                    <i class="fas fa-users"></i>
+                    <p class="counter">1000</p>
+                    <h4>Users</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //stats -->
+    <!-- testimonials -->
+    <div class="slider py-5" id="testi">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="title-heading text-center mb-sm-5 mb-4">
+                <h3 class="title text-capitalize text-dark">what our people say's</h3>
+                <p class="title-text font-weight-light font-italic mt-2">
+                    Our surfers' recommendations
+                </p>
+            </div>
+            <div class="flexslider text-center">
+                <ul class="slides">
+                    <li>
+                        <div class="client-grids">
+                            <img src="images/c1.jpg" class="img-fluid" alt="Responsive image">
+                            <h4 class="my-4">Aaliyah Moye</h4>
+                            <p class="paragraph-agileinfo">
+                                The experience is amazing, I found the nearest and best ice cream shops  thanks to the website, I highly recommend
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="client-grids">
+                            <img src="images/c2.jpg" class="img-fluid" alt="Responsive image">
+                            <h4 class="my-4">Smith Kevin</h4>
+                            <p class="paragraph-agileinfo">
+                                Good site, I found here the best and most delicious ice creams in a short while, matching my area and looking at the rankings of the ice creams provided by the site, among the best sites
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="client-grids">
+                            <img src="images/c3.jpg" class="img-fluid" alt="Responsive image">
+                            <h4 class="my-4">Edwin Hale</h4>
+                            <p class="paragraph-agileinfo">
+                                I found on the site ice creams that fit me because the site provides ice cream search by calorie and nutritional composition which is really great for people with disabilities in food.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //testimonials -->
+    <!-- newsletter -->
+    <div class="footer-top py-4 text-center">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- newsletter  -->
+            <div class="agile-newsletter">
+                <p class="text-white">Get the latest posts delivery directly to your inbox!</p>
+                <form action="/IceCream/SendEmail" method="post" class="my-4" >
+                    <input type="email" placeholder="E-mail" name="email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+            <!-- //newsletter -->
+            <!-- social icons -->
+            <div class="footercopy-social py-3">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="https://twitter.com/">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/">
+                            <span class="fab fa-instagram"></span>
+                        </a>
+                    </li>
+                    <li class="ml-2">
+                        <a href="https://telegram.org/">
+                            <span class="fab fa-telegram-plane"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //social icons -->
+        </div>
+    </div>
+    <!-- //newsletter -->
+    <!-- footer -->
+    <div class="mkl_footer text-center py-4" id="footer">
+        <div class="container py-xl-5 py-4">
+            <div class="mkls_footer_grid">
+                <h2 class="text-white text-capitalize mb-5">we are best in finding ice creams</h2>
+                <p>Our information is based on the network publishes. We take no responsibility for the content</p>
+                <p>Found an incorrect detail? Have suggestions for improvement? let us know</p>
+                <!-- footer logo -->
+                <div class="logo2 my-sm-5 my-4">
+                    <a class="" href="index.html">
+                        <img src="images/logo.png" alt=" " class="img-fluid">
+                    </a>
+                </div>
+                <!-- //footer logo -->
+            </div>
+            <!-- address -->
+            <div class="contact-left-footer border-bottom pb-sm-5 pb-4">
+                <ul>
+                    <li>
+                        <p class="text-white">
+                            <i class="fas fa-lock"></i>
+                            <a href="#footer" class="text-white" onclick="openForm()">Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+                            <!--<button class="text-white" onclick="openForm()">Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>-->
+
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="text-white">
+                            <i class="far fa-envelope-open mr-2"></i>
+                            <a href="mailto:someone@example.com" class="text-white">Ice-creams@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="form-popup" id="myForm">
+
+                    <form action="/IceCream/Login" class="form-container" method="post">
+                        <h1>Login</h1>
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input name="password" type="password" placeholder="Enter Password" required>
+
+                        <!-- admin123 password -->
+                        <!--<a href="/IceCream/Login" type="submit" class="btn">Login</a>-->
+                        <!--@Html.ActionLink("submit", "Login", "IceCream", new { @id = item.ID }, new { @class = "btn btn-default" })-->
+
+                        <button type="submit" class="btn">Login</button>
+
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+
+                        <!--<script>
+                            function myFunction() {
+                                var e = document.getElementById("email").value;
+                                var p = document.getElementById("password").value;
+                                //window.location.href = "~/Controllers/IceCream/Login" + a + p;
+                                //window.location.href = '@Url.Action("Login", "~/Controllers/IceCream")' + e + p;
+                                window.location.href = "IceCream/Login/" + e + p;
+                            }
+                        </script>-->
+                    </form>
+
+                </div>
+            </div>
+            <!-- //address -->
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="w3l-copy text-center py-4">
+        <p class="text-white">
+            © 2019 Ice Cream. All rights reserved | Odeliah movadat & Riki Zilbershlag
+        </p>
+    </div>
+    <!-- //copyright -->
+    <!-- Js files -->
+    <!-- JavaScript -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- Default-JavaScript-File -->
+    <!-- Owl-Carousel-JavaScript (for welcome section) -->
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+        });
+    </script>
+    <!-- //Owl-Carousel-JavaScript (for welcome section) -->
+    <!-- flexisel slider (for middle Slider) -->
+    <script src="js/jquery.flexisel.js"></script>
+    <script>
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 5,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 440,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 667,
+                        visibleItems: 3
+                    },
+                    tablet: {
+                        changePoint: 900,
+                        visibleItems: 4
+                    }
+                }
+            });
+
+        });
+    </script>
+    <!-- //flexisel slider (for middle Slider) -->
+    <!-- flexSlider (for testimonials) -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- //flexSlider (for testimonials) -->
+    <!-- stats -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <!-- //stats -->
+    <!-- smooth scrolling -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <!-- //smooth scrolling -->
+    <!-- start-smoth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- smooth scrolling-bottom-to-top -->
+    <script>
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+    <!-- //smooth scrolling-bottom-to-top -->
+    <!-- Pogo slider (for banner) -->
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Pogo slider (for banner) -->
+
+    <script src="js/bootstrap.js"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- //Js files -->
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    <!--@if (ViewBag.Error != null)
+    {
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewBag.Error");
+        };
+    </script>
+    }-->
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+﻿<html lang="zxx">
+
+    @{
+        ViewBag.Title = "MapView";
+    }
+
+    <head>
+        @Styles.Render("~/css/css")
+
+    </head>
+    <body>
+        <br>
+        <hr>
+        <p>
+        Find the most close Ice cream stores to your location!
+            </p>
+        <br />
+        <div id="map" style="width:100%;height:400px;"></div>
+
+        <script type="text/javascript">
+
+            function myMap() {
+                var mapProp = {
+                    center: new google.maps.LatLng(32.109333, 34.855499),
+                    zoom: 10,
+                };
+
+                var map = new google.maps.Map(document.getElementById("map"), mapProp);
+                var marker = new google.maps.Marker({ position: map.center });
+                marker.setMap(map);
+
+
+                // Get user's location
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => {
+                            console.log(`Lat: ${position.coords.latitude} Lng: ${position.coords.longitude}`);
+
+                            // Set marker's position.
+                            marker.setPosition({
+                              lat: position.coords.latitude,
+                              lng: position.coords.longitude
+                            });
+
+                            // Center map to user's position.
+                            map.panTo({
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            });
+                        },
+                        err => alert(`Error (${err.code}): ${getPositionErrorMessage(err.code)}`)
+                    );
+                } else {
+                    alert('Geolocation is not supported by your browser.');
+                }
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var res = JSON.parse(this.responseText);
+                        console.log(res);
+                        var x = "[";
+                        for (var i = 0; i < res.length - 1; i++) {
+                            x += res[i].Address + ", ";
+                        }
+                        x += res[res.length - 1].Address + "]";
+                        console.log(x);
+                        var geocoder = new google.maps.Geocoder();
+                        geocoder.geocode({ 'address': x }, function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                console.log(results);
+                                for (var i = 0; i < results.length; i++) {
+                                    var marker1 = new google.maps.Marker({ position: new google.maps.LatLng(results[i].geometry.location.lat(), results[i].geometry.location.lng()) });
+                                    marker1.setMap(map);
+                                    console.log(res[i].ID);
+                                    var infowindow = new google.maps.InfoWindow({ content: "<a style='float:left;padding:0px' href=\"/Store/Details?id=" + res[i].ID + "\"><img src=" + res[i].ImageUrl + " width='50px'></a>" });
+                                    infowindow.open(map,marker1);
+                                }
+                            }
+                        });
+                        //}
+                    }
+                };
+                xhttp.open("GET", "../Api/storesApi", true);
+                xhttp.send();
+            }
+
+        </script>
+        <script type="text/javascript" src="@ViewBag.GoogleApi"></script>
+ 
+     </body>
+</html>
+
+            
+   
